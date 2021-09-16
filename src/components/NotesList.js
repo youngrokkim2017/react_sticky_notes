@@ -1,10 +1,12 @@
 import React from 'react';
 import Note from './Note';
 
-const NotesList = () => {
+const NotesList = ({ notes }) => {
     return (
         <div className="notes-list-container">
-            <Note />
+            {notes.map((note) => (
+                <Note id={note.id} text={note.text} date={note.date} />
+            ))}
         </div>
     )
 }
