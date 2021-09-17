@@ -30,3 +30,37 @@ code {
 .note-container {
   background-color: yellow;
 }
+
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* any classname with BOTH .note-container AND .new */
+.note-container.new {
+  background-color: aqua;
+}
+
+textarea {
+  border: none;
+  resize: none;
+  background-color: aqua;
+}
+
+/* add sudo element of focus */
+textarea:focus {
+  outline: none;
+}
+
+.save-button {
+  background-color: grey;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px 5 px 10px
+}
+
+.save-button:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
