@@ -66,3 +66,11 @@ textarea:focus {
   background-color: lightgrey;
   cursor: pointer;
 }
+
+.delete-button {
+  cursor: pointer;
+}
+
+/* .delete-button:hover {
+
+} */
