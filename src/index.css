@@ -29,6 +29,8 @@ code {
 
 .note-container {
   background-color: yellow;
+  /* keep white space when saving a note with breaks */
+  white-space: pre-wrap;
 }
 
 .note-footer {
