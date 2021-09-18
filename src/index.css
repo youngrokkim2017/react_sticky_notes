@@ -19,6 +19,8 @@ code {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  /* to take up the entire page */
+  min-height: 100vh;
 }
 
 .notes-list-container {
@@ -62,6 +64,14 @@ textarea:focus {
   padding: 5px 10px 5 px 10px
 }
 
+/* same as save button */
+.toggle-button {
+  background-color: grey;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px 5 px 10px
+}
+
 .save-button:hover {
   background-color: lightgrey;
   cursor: pointer;
@@ -92,4 +102,18 @@ textarea:focus {
 /* on a focused element aka anything the user has clicked on */
 .search input:focus {
   outline: none;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dark-mode {
+  background-color: black;
+}
+
+.dark-mode h1 {
+  color: white;
 }
