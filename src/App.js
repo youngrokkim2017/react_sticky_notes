@@ -27,13 +27,6 @@ const App = () => {
 
   const [darkMode, setDarkMode] = useState(false);
 
-  // save to local storage
-  useEffect(() => {
-    // first parameter is the key
-    // second paramter is the data we want to save (good practice to stringify data before saving to local storage)
-    localStorage.setItem('react-notes-app-data', JSON.stringify(notes))
-  }, [notes]); // dependency array, whenever whatever is in the [] changes, it updates
-
   // retrieve items from local storage
   useEffect(() => {
     // have to parse the data in JS object from the JSON we saved into local storage
@@ -45,6 +38,13 @@ const App = () => {
       setNotes(savedNotes)
     }
   }, []) // when dependency array is empty, it will only run on the first load and not anymore after that
+
+  // save to local storage
+  useEffect(() => {
+    // first parameter is the key
+    // second paramter is the data we want to save (good practice to stringify data before saving to local storage)
+    localStorage.setItem('react-notes-app-data', JSON.stringify(notes))
+  }, [notes]); // dependency array, whenever whatever is in the [] changes, it updates
 
   const addNote = (text) => {
     const date = new Date();
