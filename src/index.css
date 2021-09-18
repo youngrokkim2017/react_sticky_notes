@@ -74,3 +74,22 @@ textarea:focus {
 /* .delete-button:hover {
 
 } */
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: lightgrey;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1.5em;
+}
+
+.search input {
+  border: none;
+  background-color: lightgrey;
+}
+
+/* on a focused element aka anything the user has clicked on */
+.search input:focus {
+  outline: none;
+}
