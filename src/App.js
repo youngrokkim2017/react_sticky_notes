@@ -20,7 +20,9 @@ const App = () => {
       text: "this is my third note",
       date: "16/09/2021"
     },
-  ])
+  ]);
+
+  const [searchText, setSearchText] = useState("");
 
   const addNote = (text) => {
     const date = new Date();
@@ -43,9 +45,9 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <Search />
+      <Search handleSearchNote={setSearchText} />
       <NotesList 
-        notes={notes} 
+        notes={notes.filter((currentNote) => currentNote.text.toLowerCase().includes(searchText))} 
         handleAddNote={addNote} 
         handleDeleteNote={deleteNote}
         />
